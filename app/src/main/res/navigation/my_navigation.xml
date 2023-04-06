@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.karimov03.ums.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_tariflarFragment"
+            app:destination="@id/tariflarFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_daqiqalarFragment"
+            app:destination="@id/daqiqalarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tariflarFragment"
+        android:name="com.karimov03.ums.Fragments.TariflarFragment"
+        android:label="fragment_tariflar"
+        tools:layout="@layout/fragment_tariflar" >
+        <action
+            android:id="@+id/action_tariflarFragment_to_haqidaFragment"
+            app:destination="@id/haqidaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/haqidaFragment"
+        android:name="com.karimov03.ums.Fragments.HaqidaFragment"
+        android:label="fragment_haqida"
+        tools:layout="@layout/fragment_haqida" />
+    <fragment
+        android:id="@+id/daqiqalarFragment"
+        android:name="com.karimov03.ums.Fragments.DaqiqalarFragment"
+        android:label="fragment_daqiqalar"
+        tools:layout="@layout/fragment_daqiqalar" >
+        <action
+            android:id="@+id/action_daqiqalarFragment_to_haqidaFragment"
+            app:destination="@id/haqidaFragment" />
+    </fragment>
+</navigation>
